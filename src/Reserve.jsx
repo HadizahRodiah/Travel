@@ -22,32 +22,32 @@ const Reserve = () => {
   <div class="carousel-inner px-20 ">
     <div className="carousel-item active">
       <img src={Iml} className="d-block w-100 p-20" alt="..."/>
-       <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'>Visiting Banff and jasper in winter?<a>more</a></cite> 
+       <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'>Visiting Banff and jasper in winter?<a>more</a></cite> 
     </div>
     <div class="carousel-item">
       <img src={Imo} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'>Top 7 ski-in-ski-out Accommodations in sugar Mountain,North Carolina<a>More</a></cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900  hidden round rounded-full'>Top 7 ski-in-ski-out Accommodations in sugar Mountain,North Carolina<a>More</a></cite> 
     </div>
     <div class="carousel-item">
       <img src={Imk} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'>Amazing over Water bungalows,Hotel suites <a>More</a></cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'>Amazing over Water bungalows,Hotel suites <a>More</a></cite> 
     </div>
     <div class="carousel-item">
       <img src={Imj} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'>Switzerland in winter, a non skiers guide ,the ginger wanderlust <a>more</a> </cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'>Switzerland in winter, a non skiers guide ,the ginger wanderlust <a>more</a> </cite> 
     </div>
     <div class="carousel-item">
       <img src={Imm} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'> Switzerland in winter, nice mountain view <a>more</a> </cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'> Switzerland in winter, nice mountain view <a>more</a> </cite> 
     </div>
     <div class="carousel-item">
       <img src={Imn} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'>The wintry enchantment of an Alpine village <a>more</a></cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'>The wintry enchantment of an Alpine village <a>more</a></cite> 
 
     </div>
     <div class="carousel-item">
       <img src={Imo} className="d-block w-100 p-20" alt="..."/>
-      <cite className='bg-green-300 w-96 item-center  text-slate-900  round rounded-full'> Top 7 ski-in-ski-out Accommodations in sugar Mountain,North Carolina<a>More</a></cite> 
+      <cite className='bg-green-300 w-96 item-center  text-slate-900 hidden round rounded-full'> Top 7 ski-in-ski-out Accommodations in sugar Mountain,North Carolina<a>More</a></cite> 
 
     </div>
 
