@@ -6,16 +6,19 @@ import Review from './Review.jsx'
 import Home from './Home.jsx'
 import Reserve from './Reserve.jsx'
 import Service from './Service.jsx'
-
+import Iml from './assets/Iml.jpg'
 
 function App() {
   
 
   return (
    <>
-<Nav/>
-<Home/>
-<Service/>
+   <div>
+    <img src={Iml} className='w-screen h-screen absolute opacity-50 mb-20'/>
+    <Nav/>
+    <Home/>
+    <Service/>
+   </div>
 <Reserve/>
 <Review/>
 <Footer/>

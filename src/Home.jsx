@@ -1,35 +1,33 @@
-import React from 'react'
-import * as Icons from 'react-bootstrap-icons';
- 
-
+import React from 'react';
 const Home = () => {
-
   return (
-           <div className=' w-screen bg-gradient-to-r from-slate-700 to-slate-200 text-black bg-slate-700' id='home'>
-             <div className='flex flex-col py-14 justify-between md:flex-col items-center md:space-x-12'>
-                <h1 className='justify-center font-bold text-4xl text-white shadow-lg bg-slate-700  w-60 round rounded-lg'>Diamond Star</h1>
-           <p className='text-justify p-10 text-white'>Welcome to ALMAS Land page, nothing serious about this application just for learning purpose
-            all images were downloaded from pinterest. 
-            </p>       
-            <Icons.Diamond width={80} height={80} className='text-white'/>
-              <div className='bg-green-600 text-center mt-20'>
-                 <div classNameName='bg-white text-black px-8 md:px-16 lg:px-24  flex flex-col justify-space md:flex-row'>
-                   
-                 <div className="navbar bg-slate-200 hidden md:block">
-                     <div className="container-fluid">
-                 <form className="d-flex" role="search">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button className="btn btn-outline-success hover:bg-slate-900" type="submit">Search</button>
-               </form>
-               </div>
+    <div className="w-screen bg-transparent text-black relative  pt-20" id="home">
+      <div className="flex flex-col py-2 justify-between mt-20 items-center space-y-2">
+        <h1 className="font-bold text-5xl text-slate-900 shadow-lg text-center">
+          Travels and Tour
+        </h1>
+        <p className="text-center p-5 text-black font-bold max-w-4xl">
+          Welcome to ALMAS Land page, nothing serious about this application just for learning purposes.
+        </p>
 
-                </div>       
-                </div>
-                </div>
- </div>
- </div>
- 
-  )
-}
+        {/* Buttons for Resort and Contact (visible on mobile) */}
+        <div className="flex flex-row mb-20 md:hidden">
+          <a
+            href="#resort"
+            className="font-bold text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full bg-slate-900 text-center"
+          >
+            Resort
+          </a>
+          <a
+            href="#footer"
+            className="font-bold text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full bg-slate-900 text-center"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
