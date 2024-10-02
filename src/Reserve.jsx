@@ -13,6 +13,7 @@ const Reserve = () => {
       <div className='py-20 bg-slate-900 flex flex-col flex-wrap md:flex-row' id='resort'>
         <div className='w-full py-10 text-center flex flex-col justify-between md:w-1/2'>
           <span className='font-bold text-5xl text-white'>Resort</span>
+          <p className=' italic p-10 text-white'> A Time alone faraway from stress is never loneliness, traveling far away for exploration and holiday could be so relaxing , enjoy life to the fullest, we only live once</p>
           <span className='text-3xl text-white font-bold'>Have a nice holiday!</span>
         </div>
         <div className='w-full md:w-1/2 px-4'>

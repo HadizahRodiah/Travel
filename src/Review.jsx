@@ -3,19 +3,21 @@ import Imp from './assets/Imp.jpg';
 import Imq from './assets/Imq.jpg';
 import Imt from './assets/Imt.jpg';
 import Ims from './assets/Ims.jpg';
-
 import * as Icons from 'react-bootstrap-icons';
 
 const Review = () => {
   return (
-    <div className='w-screen'>
+    <div className='w-full overflow-x-hidden'>
       <div className='p-10 bg-white flex flex-col flex-wrap justify-between py-12 md:flex-row' id='review'>
-        <div className='w-100 py-10 text-center flex flex-col justify-between md:flex-col items-center md:space-x-12'>
+        {/* Title Section */}
+        <div className='w-full py-10 text-center flex flex-col justify-between items-center'>
           <Icons.PencilSquare width={100} height={100} className='text-slate-900 transition-transform duration-300 hover:scale-110' />
           <span className='font-bold text-5xl text-black w-80'>Customers</span>
           <span className='text-3xl text-slate-600 font-bold'>Reviews</span>
         </div>
-        <div className='w-400 py-10 text-center flex flex-col justify-between md:flex-row flex-wrap items-center md:space-x-12'>
+
+        {/* Reviews Section */}
+        <div className='w-full py-10 flex flex-col md:flex-row flex-wrap justify-center items-center'>
           {[
             {
               name: 'Yusuf Hadizzay',
@@ -67,10 +69,13 @@ const Review = () => {
               img: Ims,
             },
           ].map(({ name, email, review, stars, img }, index) => (
-            <div key={index} className='flex flex-col shadow-lg  bg-slate-400 p-5 w-96 m-2 transition-transform duration-300 hover:bg-white hover:shadow-xl hover:scale-105'>
+            <div
+              key={index}
+              className='flex flex-col shadow-lg bg-slate-400 p-5 w-96 m-2 transition-transform duration-300 hover:bg-white hover:shadow-xl hover:scale-105'
+            >
               <div className='flex flex-row items-center'>
                 {img ? (
-                  <img src={img} width={40} height={35} className='rounded-full shadow-lg' />
+                  <img src={img} alt={`${name}'s review`} width={40} height={40} className='rounded-full shadow-lg' />
                 ) : (
                   <Icons.Person width={40} height={40} />
                 )}
@@ -79,9 +84,14 @@ const Review = () => {
               <cite>{email}</cite>
               <p className='text-black font-bold'>{review}</p>
               <h5 className='italic font-400'>more</h5>
-              <div className='flex flex-row item-center justify-center'>
+              <div className='flex flex-row items-center justify-center'>
                 {Array.from({ length: 5 }, (_, i) => (
-                  <Icons.StarFill key={i} width={25} height={15} className={i < stars ? 'text-yellow-500' : 'text-gray-400'} />
+                  <Icons.StarFill
+                    key={i}
+                    width={25}
+                    height={15}
+                    className={i < stars ? 'text-yellow-500' : 'text-gray-400'}
+                  />
                 ))}
               </div>
             </div>

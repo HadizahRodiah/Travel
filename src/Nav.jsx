@@ -24,16 +24,16 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-transparent text-black border border-slate-900 px-8 md:px-16 lg:px-24 w-screen fixed top-0 left-0 z-50">
-        <div className="container mt-2 py-4 flex justify-between items-center">
+      <nav className="bg-transparent text-black border border-slate-900 px-8 md:px-16 lg:px-24 w-full fixed top-0 left-0 z-50 overflow-x-hidden">
+        <div className="container mt-2 py-6 flex justify-between">
           {/* Logo Section */}
-          <div className="text-2xl font-bold flex items-center">
+          <div className="text-2xl font-bold flex mr-4 ">
             <Icons.StarFill width={40} height={40} className="text-slate-900" />
-            <span className="ml-2  md:inline">Travel&Tour</span>
+            <span className="ml-2 md:inline">Travel&Tour</span>
           </div>
 
           {/* Navigation Links for Desktop */}
-          <div className="hidden md:flex space-x-8 font-bold">
+          <div className="hidden md:flex space-x-8 font-bold  mr-4">
             <a href="#home" className="hover:text-green-700 transition-colors duration-300">Home</a>
             <a href="#resort" className="hover:text-green-700 transition-colors duration-300">Resort</a>
             <a href="#review" className="hover:text-green-700 transition-colors duration-300">Review</a>
@@ -84,10 +84,10 @@ const Nav = () => {
             {/* Mobile Menu Content */}
             <div className="fixed top-0 right-0 w-3/4 max-w-sm bg-white shadow-lg z-50 h-full p-8 overflow-y-auto">
               <div className="flex flex-col space-y-6">
-              <div className="text-2xl font-bold flex items-center">
-            <Icons.StarFill width={40} height={40} className="text-slate-900" />
-            <span className="ml-2 text-slate-900">Travel&Tour</span>
-          </div>
+                <div className="text-2xl font-bold flex items-center">
+                  <Icons.StarFill width={40} height={40} className="text-slate-900" />
+                  <span className="ml-2 text-slate-900">Travel&Tour</span>
+                </div>
                 <a href="#home" className="block py-2 text-center font-bold hover:text-green-700">Home</a>
                 <a href="#resort" className="block py-2 text-center font-bold hover:text-green-700">Resort</a>
                 <a href="#review" className="block py-2 text-center font-bold hover:text-green-700">Review</a>
@@ -110,7 +110,7 @@ const Nav = () => {
 
                 <a
                   href="#footer"
-                  className="mt-4 font-bold text-white px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-700 transition duration-300 text-center"
+                  className="mt-4 mr-auto font-bold text-white px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-700 transition duration-300 text-center"
                 >
                   Contact
                 </a>

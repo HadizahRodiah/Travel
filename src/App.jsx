@@ -9,10 +9,8 @@ import Service from './Service.jsx'
 import Iml from './assets/Iml.jpg'
 
 function App() {
-  
-
   return (
-   <>
+   < div className='overflow-x-hidden'>
    <div>
     <img src={Iml} className='w-screen h-screen absolute opacity-50 mb-20'/>
     <Nav/>
@@ -22,7 +20,7 @@ function App() {
 <Reserve/>
 <Review/>
 <Footer/>
-    </>
+    </div>
   )
 }
 
