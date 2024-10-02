@@ -3,7 +3,7 @@ const Home = () => {
   return (
     <div className="w-screen bg-transparent text-black relative  pt-20" id="home">
       <div className="flex flex-col py-2 justify-between mt-20 items-center space-y-2">
-        <h1 className="font-bold text-5xl text-slate-900 shadow-lg text-center">
+        <h1 className="font-bold text-5xl text-slate-900  text-center">
           Travels and Tour
         </h1>
         <p className="text-center p-5 text-black font-bold max-w-4xl">

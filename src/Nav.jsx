@@ -27,13 +27,13 @@ const Nav = () => {
       <nav className="bg-transparent text-black border border-slate-900 px-8 md:px-16 lg:px-24 w-full fixed top-0 left-0 z-50 overflow-x-hidden">
         <div className="container mt-2 py-6 flex justify-between">
           {/* Logo Section */}
-          <div className="text-2xl font-bold flex mr-4 ">
+          <div className="text-2xl font-bold flex">
             <Icons.StarFill width={40} height={40} className="text-slate-900" />
             <span className="ml-2 md:inline">Travel&Tour</span>
           </div>
 
           {/* Navigation Links for Desktop */}
-          <div className="hidden md:flex space-x-8 font-bold  mr-4">
+          <div className="hidden md:flex space-x-8 font-bold ">
             <a href="#home" className="hover:text-green-700 transition-colors duration-300">Home</a>
             <a href="#resort" className="hover:text-green-700 transition-colors duration-300">Resort</a>
             <a href="#review" className="hover:text-green-700 transition-colors duration-300">Review</a>
