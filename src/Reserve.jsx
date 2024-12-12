@@ -9,22 +9,23 @@ import Imm from './assets/Imm.jpg';
 
 const Reserve = () => {
   return (
-    <div className='w-screen'>
-      <div className='py-20 bg-slate-900 flex flex-col flex-wrap md:flex-row' id='resort'>
-        <div className='w-full py-10 text-center flex flex-col justify-between md:w-1/2'>
-          <span className='font-bold text-5xl text-white'>Resort</span>
-          <p className=' italic p-10 text-white'> A Time alone faraway from stress is never loneliness, traveling far away for exploration and holiday could be so relaxing , enjoy life to the fullest, we only live once</p>
-          <span className='text-3xl text-white font-bold'>Have a nice holiday!</span>
+    <div className="w-screen">
+      <div className="py-20 bg-slate-900 flex flex-col flex-wrap md:flex-row" id="resort">
+        <div className="w-full py-10 text-center flex flex-col justify-between md:w-1/2">
+          <span className="font-bold text-4xl md:text-5xl text-white">Resort</span>
+          <p className="italic px-6 md:px-10 text-white leading-relaxed max-w-2xl mx-auto">
+            A time alone far away from stress is never loneliness. Traveling far away for exploration and holiday can be so relaxing. Enjoy life to the fullest—we only live once!
+          </p>
+          <span className="text-2xl md:text-3xl text-white font-bold">Have a nice holiday!</span>
         </div>
-        <div className='w-full md:w-1/2 px-4'>
+        <div className="w-full md:w-1/2 px-4">
           <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
             <div className="carousel-inner">
               {[Iml, Imo, Imk, Imj, Imm, Imn].map((image, index) => (
                 <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                  <img src={image} className="d-block w-100" alt={`Slide ${index + 1}`} />
-                  <div className='carousel-caption d-none d-md-block'>
-                    <cite className='bg-green-300 p-2 rounded-full text-slate-900'>
-                      {/* Add more link for captions if necessary */}
+                  <img src={image} className="d-block w-100 rounded" alt={`Slide ${index + 1}`} />
+                  <div className="carousel-caption d-none d-md-block">
+                    <cite className="bg-green-300 p-2 rounded-full text-slate-900">
                       More info <a href="#" className="text-slate-900 underline">here</a>
                     </cite>
                   </div>

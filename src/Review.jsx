@@ -8,16 +8,16 @@ import * as Icons from 'react-bootstrap-icons';
 const Review = () => {
   return (
     <div className='w-full overflow-x-hidden'>
-      <div className='p-10 bg-white flex flex-col flex-wrap justify-between py-12 md:flex-row' id='review'>
+      <div className='p-4 md:p-10 bg-white flex flex-col flex-wrap justify-between py-12 md:flex-row' id='review'>
         {/* Title Section */}
-        <div className='w-full py-10 text-center flex flex-col justify-between items-center'>
-          <Icons.PencilSquare width={100} height={100} className='text-slate-900 transition-transform duration-300 hover:scale-110' />
-          <span className='font-bold text-5xl text-black w-80'>Customers</span>
-          <span className='text-3xl text-slate-600 font-bold'>Reviews</span>
+        <div className='w-full py-6 md:py-10 text-center flex flex-col justify-between items-center'>
+          <Icons.PencilSquare width={60} height={60} className='text-slate-900 transition-transform duration-300 hover:scale-110' />
+          <span className='font-bold text-3xl md:text-5xl text-black w-80'>Customers</span>
+          <span className='text-xl md:text-3xl text-slate-600 font-bold'>Reviews</span>
         </div>
 
         {/* Reviews Section */}
-        <div className='w-full py-10 flex flex-col md:flex-row flex-wrap justify-center items-center'>
+        <div className='w-full py-6 md:py-10 flex flex-col md:flex-row flex-wrap justify-center items-center'>
           {[
             {
               name: 'Yusuf Hadizzay',
@@ -71,7 +71,7 @@ const Review = () => {
           ].map(({ name, email, review, stars, img }, index) => (
             <div
               key={index}
-              className='flex flex-col shadow-lg bg-slate-400 p-5 w-96 m-2 transition-transform duration-300 hover:bg-white hover:shadow-xl hover:scale-105'
+              className='flex flex-col shadow-lg bg-slate-400 p-4 md:p-5 w-full md:w-96 m-2 transition-transform duration-300 hover:bg-white hover:shadow-xl hover:scale-105'
             >
               <div className='flex flex-row items-center'>
                 {img ? (
