@@ -13,6 +13,20 @@ const Footer = () => {
             <FooterLink href="#service" icon={<Icons.Wrench />} label="Service" />
             <FooterLink href="#project" icon={<Icons.Briefcase />} label="Project" />
           </nav>
+        </div>
+
+        {/* Contact Us Section */}
+        <div className="flex flex-wrap justify-between mb-8">
+          <div className="md:w-1/3 mb-6 md:mb-0">
+            <h2 className="text-xl font-semibold mb-4">Contact Us!</h2>
+            <ul>
+              <ContactItem icon={<Icons.Whatsapp />} label="Whatsapp" href="https://wa.me/+2349155140115" />
+              <ContactItem icon={<Icons.Envelope />} label="Email" href="mailto:hadizahrodiah@gmail.com" />
+              <ContactItem icon={<Icons.Facebook />} label="Facebook" href="https://facebook.com/rodiah.hadizah" />
+              <ContactItem icon={<Icons.Telephone />} label="Phone" href="tel:+2349155140115" />
+              <ContactItem icon={<Icons.Linkedin />} label="LinkedIn" href="https://bit.ly/4dbrkDV" />
+            </ul>
+          </div>
 
           {/* Subscribe Section */}
           <div className="md:w-1/3 mb-6 md:mb-0">
@@ -37,23 +51,9 @@ const Footer = () => {
             </form>
             <p className="text-sm mt-2">We'll never share your email with anyone else.</p>
           </div>
-        </div>
-
-        {/* Contact Us Section */}
-        <div className="flex flex-wrap justify-between mb-8">
-          <div className="md:w-1/3 mb-6 md:mb-0">
-            <h2 className="text-xl font-semibold mb-4">Contact Us!</h2>
-            <ul>
-              <ContactItem icon={<Icons.Whatsapp />} label="Whatsapp" href="https://wa.me/+2349155140115" />
-              <ContactItem icon={<Icons.Envelope />} label="Email" href="mailto:hadizahrodiah@gmail.com" />
-              <ContactItem icon={<Icons.Facebook />} label="Facebook" href="https://facebook.com/rodiah.hadizah" />
-              <ContactItem icon={<Icons.Telephone />} label="Phone" href="tel:+2349155140115" />
-              <ContactItem icon={<Icons.Linkedin />} label="LinkedIn" href="https://bit.ly/4dbrkDV" />
-            </ul>
-          </div>
 
           {/* Review Section */}
-          <div className="md:w-1/3 hidden md:block">
+          <div className="md:w-1/3">
             <h2 className="text-xl font-semibold mb-4">Give us a review</h2>
             <form className="flex flex-col space-y-4">
               <div className="flex flex-col">
