@@ -3,114 +3,128 @@ import * as Icons from 'react-bootstrap-icons';
 
 const Footer = () => {
   return (
-    <div className="py-20 bg-slate-900 max-w-full overflow-x-hidden" id="footer">
-      <div className="flex flex-wrap justify-between px-6 md:px-20 font-bold">
-        <div className="flex flex-col md:flex-row">
-          <div className="flex flex-row items-center text-white mb-4 md:mb-0 md:mr-8">
-            <Icons.House width={25} height={25} className="hidden md:block text-white mr-3" />
-            <a href="#home" className="hover:underline">Home</a>
+    <footer className="bg-slate-900 text-gray-200 py-12 w-full" id="footer">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-wrap justify-between mb-8">
+          {/* Navigation Links */}
+          <nav className="flex flex-col md:flex-row items-center md:space-x-8 mb-6 md:mb-0">
+            <FooterLink href="#home" icon={<Icons.House />} label="Home" />
+            <FooterLink href="#about" icon={<Icons.InfoCircle />} label="About" />
+            <FooterLink href="#service" icon={<Icons.Wrench />} label="Service" />
+            <FooterLink href="#project" icon={<Icons.Briefcase />} label="Project" />
+          </nav>
+
+          {/* Subscribe Section */}
+          <div className="md:w-1/3 mb-6 md:mb-0">
+            <h2 className="text-xl font-semibold mb-4">Stay Updated!</h2>
+            <form>
+              <label htmlFor="subscribeEmail" className="block text-sm font-medium mb-2">Email address</label>
+              <div className="flex flex-col md:flex-row">
+                <input
+                  type="email"
+                  id="subscribeEmail"
+                  className="flex-grow p-2 mb-2 md:mb-0 md:mr-2 rounded text-black"
+                  placeholder="Enter your email..."
+                  required
+                />
+                <button
+                  type="submit"
+                  className="p-2 bg-indigo-600 text-white font-bold rounded hover:bg-indigo-700 transition duration-300"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <p className="text-sm mt-2">We'll never share your email with anyone else.</p>
           </div>
-          <div className="flex flex-row items-center text-white mb-4 md:mb-0 md:mr-8">
-            <Icons.Screwdriver width={25} height={25} className="hidden md:block text-white mr-3" />
-            <a href="#service" className="hover:underline">Service</a>
+        </div>
+
+        {/* Contact Us Section */}
+        <div className="flex flex-wrap justify-between mb-8">
+          <div className="md:w-1/3 mb-6 md:mb-0">
+            <h2 className="text-xl font-semibold mb-4">Contact Us!</h2>
+            <ul>
+              <ContactItem icon={<Icons.Whatsapp />} label="Whatsapp" href="https://wa.me/+2349155140115" />
+              <ContactItem icon={<Icons.Envelope />} label="Email" href="mailto:hadizahrodiah@gmail.com" />
+              <ContactItem icon={<Icons.Facebook />} label="Facebook" href="https://facebook.com/rodiah.hadizah" />
+              <ContactItem icon={<Icons.Telephone />} label="Phone" href="tel:+2349155140115" />
+              <ContactItem icon={<Icons.Linkedin />} label="LinkedIn" href="https://bit.ly/4dbrkDV" />
+            </ul>
           </div>
-          <div className="flex flex-row items-center text-white mb-4 md:mb-0 md:mr-8">
-            <Icons.Table width={25} height={25} className="hidden md:block text-white mr-3" />
-            <a href="#resort" className="hover:underline">Resort</a>
+
+          {/* Review Section */}
+          <div className="md:w-1/3 hidden md:block">
+            <h2 className="text-xl font-semibold mb-4">Give us a review</h2>
+            <form className="flex flex-col space-y-4">
+              <div className="flex flex-col">
+                <label htmlFor="reviewName" className="mb-2">Name</label>
+                <input
+                  type="text"
+                  id="reviewName"
+                  className="p-2 rounded text-black"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="reviewEmail" className="mb-2">Email</label>
+                <input
+                  type="email"
+                  id="reviewEmail"
+                  className="p-2 rounded text-black"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="reviewMessage" className="mb-2">Message</label>
+                <textarea
+                  id="reviewMessage"
+                  rows="5"
+                  className="p-2 rounded text-black resize-none"
+                  placeholder="Your message..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="py-2 bg-indigo-600 text-white font-bold rounded hover:bg-indigo-700 transition duration-300"
+              >
+                Submit Review
+              </button>
+            </form>
           </div>
-          <div className="flex flex-row items-center text-white mb-4 md:mb-0">
-            <Icons.PencilSquare width={25} height={25} className="hidden md:block text-white mr-3" />
-            <a href="#review" className="hover:underline">Review</a>
-          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="text-center text-gray-500">
+          &copy; {new Date().getFullYear()} All rights reserved.
         </div>
       </div>
-
-      <div className="flex flex-col md:flex-row justify-between px-6 md:px-20 py-10">
-        <div className="flex flex-col mb-10 md:mb-0 md:w-1/3">
-          <h1 className="text-slate-500 text-2xl mb-4 font-bold">Contact Us!</h1>
-          <div className="flex flex-col space-y-2">
-            <a className="flex items-center text-white hover:text-green-500 transition-colors duration-300">
-              <Icons.Whatsapp width={25} height={25} className="mr-3" /> Whatsapp
-            </a>
-            <a className="flex items-center text-white hover:text-green-500 transition-colors duration-300">
-              <Icons.Envelope width={25} height={25} className="mr-3" /> Email
-            </a>
-            <a className="flex items-center text-white hover:text-green-500 transition-colors duration-300">
-              <Icons.Facebook width={25} height={25} className="mr-3" /> Facebook
-            </a>
-            <a className="flex items-center text-white hover:text-green-500 transition-colors duration-300">
-              <Icons.Telephone width={25} height={25} className="mr-3" /> Phone
-            </a>
-            <a className="flex items-center text-white hover:text-green-500 transition-colors duration-300">
-              <Icons.Linkedin width={25} height={25} className="mr-3" /> LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col mb-10 md:mb-0 md:w-1/3">
-          <h1 className="text-slate-500 text-2xl mb-4 font-bold">Stay Updated!</h1>
-          <form>
-            <label htmlFor="subscribeEmail" className="form-label text-white font-bold mb-2">Email address</label>
-            <input
-              type="email"
-              id="subscribeEmail"
-              className="w-full p-2 rounded mb-4 text-slate-900"
-              placeholder="Enter your email..."
-              required
-            />
-            <button type="submit" className="w-full py-2 bg-white border border-white text-black rounded hover:bg-slate-700 hover:text-white font-bold transition duration-300">
-              Subscribe
-            </button>
-            <div className="form-text text-slate-600 mt-2">We'll never share your email with anyone else.</div>
-          </form>
-        </div>
-
-        <div className="flex flex-col md:w-1/3 hidden md:flex">
-          <h2 className="text-2xl font-bold text-slate-500 mb-4">Give us a review</h2>
-          <form className="flex flex-col space-y-4">
-            <div className="flex flex-col">
-              <label htmlFor="reviewName" className="text-white mb-2">Name</label>
-              <input
-                type="text"
-                id="reviewName"
-                className="p-2 rounded text-slate-900"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="reviewEmail" className="text-white mb-2">Email</label>
-              <input
-                type="email"
-                id="reviewEmail"
-                className="p-2 rounded text-slate-900"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="reviewMessage" className="text-white mb-2">Message</label>
-              <textarea
-                id="reviewMessage"
-                rows="5"
-                className="p-2 rounded text-slate-900 resize-none"
-                placeholder="Your message..."
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="py-2 bg-white text-slate-900 font-bold rounded hover:bg-slate-700 hover:text-white transition duration-300"
-            >
-              Submit Review
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <p className="text-center text-slate-500">&copy; All rights reserved</p>
-    </div>
+    </footer>
   );
 };
+
+// Reusable Footer Link Component
+const FooterLink = ({ href, icon, label }) => (
+  <a
+    href={href}
+    className="flex items-center text-white hover:text-indigo-400 transition duration-300 mb-2 md:mb-0"
+    aria-label={label}
+  >
+    {React.cloneElement(icon, { className: "mr-2", size: 20 })}
+    {label}
+  </a>
+);
+
+// Reusable Contact Item Component
+const ContactItem = ({ icon, label, href }) => (
+  <li className="flex items-center text-white hover:text-indigo-400 transition duration-300 mb-2">
+    <a href={href} className="flex items-center" aria-label={label}>
+      {React.cloneElement(icon, { className: "mr-2", size: 20 })}
+      {label}
+    </a>
+  </li>
+);
 
 export default Footer;
